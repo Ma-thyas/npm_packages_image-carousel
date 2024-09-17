@@ -1,0 +1,82 @@
+.carousel {
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    height: 50vh;
+    width: 40vw;
+    margin: 2vh;
+}
+/* 
+.frame {
+    display: flex;
+    
+
+} */
+
+.slide {
+    position: absolute;
+    inset: 0;
+    padding: 5% 10%;
+    transition: 2s opacity ease-in-out;
+}
+
+
+.slide img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.slide img[data-active] {
+    display: block;
+}
+
+.carousel-img {
+    animation-name: ease-in-out;
+    animation-duration: 500ms;
+  }
+
+@keyframes ease-in-out {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+   
+.arrows {
+    position: absolute;
+    top: 44%;
+    left: 0;
+    right: 0;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+}
+
+.arrows img {
+    width: 6vh;
+    filter: invert(58%) sepia(17%) saturate(43%) hue-rotate(236deg) brightness(88%) contrast(88%);
+}
+
+.arrows img:hover,
+.arrows img:focus {
+    filter: invert(99%) sepia(0%) saturate(7222%) hue-rotate(302deg) brightness(126%) contrast(85%);
+    cursor: pointer;
+
+}
+
+.dot {
+    height: 5vh;
+    width: 5vh;
+    background-color: #878588;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .dot:hover {
+    background-color: #f0f0f0;
+  }
+
