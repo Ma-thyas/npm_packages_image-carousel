@@ -1,25 +1,20 @@
 .carousel {
-    position: relative;
-    overflow: hidden;
-    background-color: black;
-    height: 50vh;
-    width: 40vw;
+    position: relative; 
+    height: 55vh;
+    width: 45vw;
+    min-width: 35vh;
+    min-height: 35vh;
+
     margin: 2vh;
 }
-/* 
-.frame {
-    display: flex;
-    
-
-} */
 
 .slide {
     position: absolute;
+    background-color: black;
     inset: 0;
-    padding: 5% 10%;
+    padding: 7% 10%;
     transition: 2s opacity ease-in-out;
 }
-
 
 .slide img {
     display: none;
@@ -27,7 +22,6 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-
 }
 
 .slide img[data-active] {
@@ -36,7 +30,7 @@
 
 .carousel-img {
     animation-name: ease-in-out;
-    animation-duration: 500ms;
+    animation-duration: 1s;
   }
 
 @keyframes ease-in-out {
@@ -45,38 +39,54 @@
   }
 
    
-.arrows {
+.control {
     position: absolute;
-    top: 44%;
+    top: 46%;
     left: 0;
     right: 0;
-    padding: 0 15px;
+    padding: 0 1.3vh;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; 
+    align-items: center; 
 }
 
-.arrows img {
-    width: 6vh;
+.control img {
+    width: 8%;
     filter: invert(58%) sepia(17%) saturate(43%) hue-rotate(236deg) brightness(88%) contrast(88%);
 }
 
-.arrows img:hover,
-.arrows img:focus {
+.control img:hover,
+.control img:focus {
     filter: invert(99%) sepia(0%) saturate(7222%) hue-rotate(302deg) brightness(126%) contrast(85%);
     cursor: pointer;
+}
 
+.dots {
+    position: absolute;
+    top: 92%;
+    left: 0;
+    right: 0;
+    padding: 1vh 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
 }
 
 .dot {
-    height: 5vh;
-    width: 5vh;
-    background-color: #878588;
-    border-radius: 50%;
-    cursor: pointer;
+    padding: 0 .3vh;
+    width: 1.3%;
+    filter: invert(58%) sepia(17%) saturate(43%) hue-rotate(236deg) brightness(88%) contrast(88%);
   }
 
-  .dot:hover {
-    background-color: #f0f0f0;
+  .dot:hover,
+  .dot:focus {
+    filter: invert(99%) sepia(2%) saturate(350%) hue-rotate(31deg) brightness(112%) contrast(84%);    
+    cursor: pointer
+  }
+
+  .active {
+    filter: invert(99%) sepia(2%) saturate(350%) hue-rotate(31deg) brightness(112%) contrast(84%);
+
   }
 
